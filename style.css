@@ -161,7 +161,8 @@ fieldset legend {
 }
 
 .item {
-  grid-column: span 2;
+  grid-column: span 3;
+  font-size: 0.75rem;
 }
 
 .input-wrapper input[readonly] {
@@ -171,19 +172,25 @@ fieldset legend {
   color: #00796b;
 }
 
+.input-wrapper.calculations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.price-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  grid-column: span 2;
+}
+
 @media (max-width: 400px) {
   .container {
     padding: 0;
   }
-  .calculator--wrapper {
-    border: none;
-    padding: 0.5rem;
-    box-shadow: none;
-  }
-}
 
-
-@media (max-width: 350px) {
   .title {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
@@ -191,7 +198,13 @@ fieldset legend {
 
   .calculator--wrapper {
     padding: 0.25rem;
-    border-radius: 0.5rem;
+    border: none;
+    box-shadow: none;
+    gap: 0.5rem;
+  }
+
+  .form {
+    gap: 0.5rem;
   }
 
   .input-wrapper {
@@ -218,6 +231,10 @@ fieldset legend {
   .item,
   .box button {
     grid-column: 1 / -1;
+  }
+
+  .item {
+    font-size: 10px;
   }
 
   .action {
